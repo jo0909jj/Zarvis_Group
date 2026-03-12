@@ -1,0 +1,50 @@
+# 配置文件
+*.json
+!package.json
+
+# 認證資訊
+auth-profiles.json
+credentials/
+*.key
+*.pem
+
+# 日誌
+*.log
+logs/
+
+# 臨時文件
+/tmp/
+*.tmp
+*.bak
+
+# 節點模組
+node_modules/
+
+# 環境變量
+.env
+.env.local
+
+# 編譯產物
+dist/
+build/
+*.o
+*.so
+
+# 編輯器
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 系統文件
+.DS_Store
+Thumbs.db
+
+# OpenClaw 會話
+sessions/
+*.lock
+
+# 敏感數據
+openclaw.json.bak*
+memory/*.md
+MEMORY.md
