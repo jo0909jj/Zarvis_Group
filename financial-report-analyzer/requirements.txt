@@ -1,0 +1,28 @@
+# 智能財報分析系統 - 依賴套件
+
+# 核心
+requests>=2.31.0
+pandas>=2.0.0
+numpy>=1.24.0
+
+# 財報抓取
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+
+# PDF 解析
+PyPDF2>=3.0.0
+pdfplumber>=0.10.0
+
+# 報告生成
+pptxgenjs-node>=3.12.0
+
+# 數據可視化
+matplotlib>=3.7.0
+plotly>=5.15.0
+
+# 工具
+python-dotenv>=1.0.0
+tqdm>=4.65.0
+
+# 測試
+pytest>=7.4.0
