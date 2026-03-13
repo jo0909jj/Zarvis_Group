@@ -1,0 +1,72 @@
+# AI PC Agent Configuration
+
+agent:
+  name: "AI PC Agent"
+  version: "1.0.0"
+  debug: false
+  
+# Browser Automation
+browser:
+  headless: false
+  timeout: 30000
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+  viewport:
+    width: 1920
+    height: 1080
+
+# System Monitor
+monitor:
+  interval: 60  # seconds
+  log_file: "logs/agent.log"
+  log_level: "INFO"
+  thresholds:
+    cpu_warning: 80
+    cpu_critical: 95
+    memory_warning: 80
+    memory_critical: 95
+    disk_warning: 80
+    disk_critical: 90
+
+# Notifications
+notification:
+  enabled: true
+  discord_webhook: ""  # Add your Discord webhook URL
+  telegram_bot: ""     # Add your Telegram bot token
+  telegram_chat_id: "" # Add your Telegram chat ID
+  
+# File Manager
+file_manager:
+  watch_dirs:
+    - "~/Downloads"
+    - "~/Desktop"
+  auto_organize: false
+  backup_enabled: false
+  backup_dir: "~/Backups"
+
+# Web Interface
+web:
+  enabled: true
+  host: "0.0.0.0"
+  port: 5000
+  debug: false
+  secret_key: "change-me-in-production"
+
+# Security
+security:
+  allowed_commands:
+    - "echo"
+    - "dir"
+    - "ls"
+    - "pwd"
+    - "cd"
+    - "mkdir"
+    - "rm"
+    - "cp"
+    - "mv"
+  blocked_commands:
+    - "sudo"
+    - "su"
+    - "rm -rf /"
+    - "format"
+    - "del /F /Q /S"
+  require_confirmation: true
