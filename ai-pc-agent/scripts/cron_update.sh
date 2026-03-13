@@ -8,10 +8,6 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$SCRIPT_DIR/.."
 
-# 使用 workspace venv
-VENV_PYTHON="/home/joechiang/.openclaw/workspace/venv/bin/python3"
-VENV_PIP="/home/joechiang/.openclaw/workspace/venv/bin/pip"
-
 echo "🤖 AI PC Agent - 自動更新"
 echo "時間：$(date)"
 echo ""
@@ -20,17 +16,22 @@ echo ""
 echo "📥 拉取最新代碼..."
 git pull origin main || echo "⚠️ Git 拉取失敗"
 
-# 2. 安裝依賴
+# 2. 安裝依賴（使用虛擬環境）
 echo "📦 檢查依賴..."
-$VENV_PIP install -r requirements.txt --quiet || echo "⚠️ 依賴安裝失敗"
+if [ -d "venv" ]; then
+    source venv/bin/activate
+    pip install -r requirements.txt --quiet 2>/dev/null || echo "⚠️ 依賴安裝失敗"
+else
+    echo "⚠️ 虛擬環境不存在，跳過依賴安裝"
+fi
 
-# 3. 運行系統監控
+# 3. 生成系統報告
 echo "📊 生成系統報告..."
-$VENV_PYTHON modules/system_monitor.py > logs/system_report.txt 2>&1 || echo "⚠️ 監控失敗"
+python3 modules/system_monitor.py > logs/system_report.txt 2>&1 || echo "⚠️ 監控失敗"
 
 # 4. 截圖（可選）
 echo "📸 截取螢幕..."
-# python modules/screenshot.py || echo "⚠️ 截圖失敗"
+# python3 modules/screenshot.py || echo "⚠️ 截圖失敗"
 
 # 5. 提交報告（如果有變更）
 echo "💾 保存報告..."
