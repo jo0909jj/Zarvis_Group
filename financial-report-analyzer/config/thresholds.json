@@ -1,0 +1,29 @@
+{
+  "red_flags": {
+    "revenue_decline_yoy": -0.20,
+    "debt_ratio_max": 0.70,
+    "operating_cashflow_negative": true,
+    "gross_margin_decline": -0.10,
+    "current_ratio_min": 1.0
+  },
+  "yellow_flags": {
+    "revenue_decline_yoy": -0.10,
+    "gross_margin_decline": -0.05,
+    "inventory_days_increase": 30,
+    "receivables_days_increase": 20,
+    "roe_decline": -0.05
+  },
+  "valuation_thresholds": {
+    "pe_percentile_high": 80,
+    "pe_percentile_low": 20,
+    "pb_percentile_high": 80,
+    "pb_percentile_low": 20
+  },
+  "scoring_weights": {
+    "profitability": 0.30,
+    "financial_health": 0.25,
+    "efficiency": 0.15,
+    "cashflow": 0.20,
+    "valuation": 0.10
+  }
+}

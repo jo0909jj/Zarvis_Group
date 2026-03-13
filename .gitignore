@@ -1,50 +1,42 @@
-# 配置文件
-*.json
-!package.json
-
-# 認證資訊
-auth-profiles.json
-credentials/
-*.key
-*.pem
-
-# 日誌
-*.log
-logs/
-
-# 臨時文件
-/tmp/
-*.tmp
-*.bak
-
-# 節點模組
-node_modules/
-
-# 環境變量
-.env
-.env.local
-
-# 編譯產物
-dist/
-build/
-*.o
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
 *.so
+.Python
+venv/
+env/
+ENV/
+.venv/
 
-# 編輯器
+# IDE
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
 
-# 系統文件
+# Logs
+logs/
+*.log
+
+# Screenshots
+screenshots/
+
+# Test files
+test_*.txt
+*.tmp
+
+# OS
 .DS_Store
 Thumbs.db
 
-# OpenClaw 會話
-sessions/
-*.lock
+# Config (keep example)
+config.yaml
+!config.yaml.example
 
-# 敏感數據
-openclaw.json.bak*
-memory/*.md
-MEMORY.md
+# Finance Monitor
+*.pyc
+.pytest_cache/
+.coverage
+htmlcov/

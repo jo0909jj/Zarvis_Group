@@ -1,0 +1,72 @@
+{
+  "tw_stocks": [
+    {
+      "symbol": "2330",
+      "name": "台積電",
+      "sector": "半導體",
+      "priority": "high"
+    },
+    {
+      "symbol": "2317",
+      "name": "鴻海",
+      "sector": "電子代工",
+      "priority": "medium"
+    },
+    {
+      "symbol": "2454",
+      "name": "聯發科",
+      "sector": "半導體",
+      "priority": "high"
+    },
+    {
+      "symbol": "1301",
+      "name": "台塑",
+      "sector": "塑膠",
+      "priority": "medium"
+    },
+    {
+      "symbol": "2881",
+      "name": "富邦金",
+      "sector": "金融",
+      "priority": "low"
+    }
+  ],
+  "us_stocks": [
+    {
+      "symbol": "AAPL",
+      "name": "Apple Inc.",
+      "sector": "科技",
+      "priority": "high"
+    },
+    {
+      "symbol": "MSFT",
+      "name": "Microsoft Corporation",
+      "sector": "科技",
+      "priority": "high"
+    },
+    {
+      "symbol": "NVDA",
+      "name": "NVIDIA Corporation",
+      "sector": "半導體",
+      "priority": "high"
+    },
+    {
+      "symbol": "TSLA",
+      "name": "Tesla Inc.",
+      "sector": "電動車",
+      "priority": "medium"
+    }
+  ],
+  "crypto": [
+    {
+      "symbol": "BTC-USD",
+      "name": "Bitcoin",
+      "priority": "medium"
+    },
+    {
+      "symbol": "ETH-USD",
+      "name": "Ethereum",
+      "priority": "low"
+    }
+  ]
+}

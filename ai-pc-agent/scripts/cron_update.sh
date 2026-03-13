@@ -1,6 +1,7 @@
 #!/bin/bash
 # AI PC Agent - Cron 自動更新腳本
-# 添加到 crontab: 0 */2 * * * /path/to/cron_update.sh
+# 添加到 crontab: */20 * * * * /path/to/cron_update.sh
+# 每 20 分鐘更新一次
 
 set -e
 
